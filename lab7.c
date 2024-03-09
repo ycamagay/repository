@@ -50,7 +50,7 @@ int main() {
     int arr1[] = {97, 16, 45, 63, 13, 22, 7, 58, 72};
     int n = sizeof(arr1) / sizeof(arr1[0]);
     int swaps_bubble1[n], swaps_bubble2[n];
-    int swaps_selection[n];
+    int swaps_selection1[n], swaps_selection2[n];
 
     printf("Array 1 with Bubble Sorting\n");
     bubbleSort(arr1, n, swaps_bubble1);
@@ -60,12 +60,31 @@ int main() {
     printf("\n");
 
     int arr2[] = {90,80,70,60,50,40,30,20,10};
+    
+    printf("Array 2 with Bubble Sorting\n");
     bubbleSort(arr2, n, swaps_bubble2);
 
     for (int i = 0; i < n; i++)
         printf("%d: %d\n", arr2[i], swaps_bubble2[i]);
     printf("\n");
     
-    return 0;   
+    int arr3[] = {97, 16, 45, 63, 13, 22, 7, 58, 72};
+
+    printf("Array 1 with Selection Sorting\n");
+    selectionSort(arr3, n, swaps_selection1);
     
+    for (int i = 0; i < n; i++)
+        printf("%d: %d\n", arr3[i], swaps_selection1[i]);
+    printf("\n");
+
+    int arr4[] = {90,80,70,60,50,40,30,20,10};
+
+    printf("Array 2 with Selection Sorting\n");
+    selectionSort(arr4, n, swaps_selection2);
+    
+    for (int i = 0; i < n; i++)
+    printf("%d: %d\n", arr4[i], swaps_selection2[i]);
+    printf("\n");
+    
+    return 0;
 }
